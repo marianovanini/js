@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    var valorElegido;
+    var valorMaquina = "piedra";
+    valorElegido = "papel";
+    var resultado;
+
+    if(valorElegido == valorMaquina){
+        resultado ="Son iguales";
+    } else if (valorElegido == "piedra"){
+        if(valorMaquina == "tijera")
+            resultado = "Gana usuario";
+        else if (valorMaquina == "papel")
+            resultado = "Gana usuario";
+    } else if (valorElegido == "tijera") {
+        if(valorMaquina == "papel")
+            resultado = "Gana usuario";
+            if(valorMaquina == "piedra")
+            resultado = "Gana maquina";
+    }else if (valorElegido == "papel") {
+        if(valorMaquina == "tijera")
+            resultado = "Gana maquina";
+            if(valorMaquina == "piedra")
+            resultado = "Gana maquina";
+    }
+    console.log(resultado);
+</script>
+<body>
+    
+</body>
+</html>
