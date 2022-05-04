@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,10 @@
 </head>
 
 <script>
+    var valores = ['piedra', 'papel', 'tijera']
     var valorElegido;
-    var valorMaquina = "piedra";
+    var rand = Math.random()*valores.length|0;
+    var valorMaquina = valores[rand];
     valorElegido = prompt("Ingrese piedra, papel o tijera");
     var resultado;
 
@@ -35,7 +38,7 @@
         else if(valorMaquina == "piedra")
             resultado = "Gana maquina";
     }
-    alert(resultado + ". El valor de la maquina es piedra");
+    alert(resultado + ". El valor de la maquina es " + valorMaquina);
 </script>
 
 <body>
