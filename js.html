@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego JS</title>
 </head>
 
 <script>
     var valorElegido;
     var valorMaquina = "piedra";
-    valorElegido = "papel";
+    valorElegido = prompt("Ingrese piedra, papel o tijera");
     var resultado;
 
+    if(valorElegido != "piedra" && valorElegido != "papel" && valorElegido != "tijera"){
+        alert("Valor no valido");
+        abort();
+    }   
     if(valorElegido == valorMaquina){
         resultado ="Son iguales";
     } else if (valorElegido == "piedra"){
@@ -23,17 +27,17 @@
     } else if (valorElegido == "tijera") {
         if(valorMaquina == "papel")
             resultado = "Gana usuario";
-            if(valorMaquina == "piedra")
+        else if(valorMaquina == "piedra")
             resultado = "Gana maquina";
     }else if (valorElegido == "papel") {
         if(valorMaquina == "tijera")
             resultado = "Gana maquina";
-            if(valorMaquina == "piedra")
+        else if(valorMaquina == "piedra")
             resultado = "Gana maquina";
     }
-    console.log(resultado);
+    alert(resultado + ". El valor de la maquina es piedra");
 </script>
+
 <body>
-    
 </body>
 </html>
